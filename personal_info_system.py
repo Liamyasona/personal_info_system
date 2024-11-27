@@ -13,6 +13,7 @@ with open("./Personal Information System.txt", "a") as info_system:
             else:
                 print("Invalid Name. Input your correct name.")
 
+        # Ask user for address
         address = input("Please input your address: ")
 
         # Ask user for age and print invalid when age inputted is less than and equal to 0
@@ -28,16 +29,19 @@ with open("./Personal Information System.txt", "a") as info_system:
 
         # Ask user for contact number and print invalid when number inputted is not in 11 digits
         while True:
-            contact_number = int(input("Please input your Contact Number: "))
-            if contact_number == 11:
-                break  
-            else:
-                print("Invalid Contact number. Please input a valid number")
+            try:
+                Phone_number = int(input("Please input your Contact Number (11 digits): "))
+                if len(str(Phone_number)) == 11:
+                    break
+                else:
+                    print("Invalid Number. Please input your correct Phone Number.")
+            except ValueError:
+                print("Invalid Number. Please input your correct Phone Number.")
 
     # Every user input will be appended to the file
 
-        info_system.write(f"Full name: {full_name}\n")
-        info_system.write()
-        info_system.write()
-        info_system.write()
-        info_system.write()
+            info_system.write(f"Full name: {full_name}\n")
+            info_system.write()
+            info_system.write()
+            info_system.write()
+            info_system.write()
