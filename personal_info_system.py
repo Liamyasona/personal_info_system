@@ -19,9 +19,17 @@ while True:
         age = int(input("Please input your age: "))
         if age <= 0:
             print("Invalid. Input the correct age")
-
+        else:
+             break
+        
     email = input("Please input your email: ")
-    contact_number = int(input("Please input your Contact Number: "))
+    while True:
+        contact_number = int(input("Please input your Contact Number: "))
+        if len(contact_number) == 11:
+            break  
+        else:
+            print
+
 
 with open("./Personal Information System.txt") as file_handle:
     file_handle.write()
