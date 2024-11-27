@@ -1,5 +1,5 @@
 # Ask user for their personal information
-with open("./Personal Information System.txt") as info_system:
+with open("./Personal Information System.txt", "a") as info_system:
      
     # Loop to keep asking user for input
     while True:
@@ -29,7 +29,7 @@ with open("./Personal Information System.txt") as info_system:
         # Ask user for contact number and print invalid when number inputted is not in 11 digits
         while True:
             contact_number = int(input("Please input your Contact Number: "))
-            if len(contact_number) == 11:
+            if contact_number == 11:
                 break  
             else:
                 print("Invalid Contact number. Please input a valid number")
