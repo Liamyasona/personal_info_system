@@ -1,5 +1,5 @@
 # Ask user for their personal information
-with open("Personal Information System.txt", "a") as info_system:
+with open("./Personal Information.txt", "w") as info_system:
      
     # Loop to keep asking user for input
     while True:
@@ -44,3 +44,7 @@ with open("Personal Information System.txt", "a") as info_system:
         info_system.write(f"Age: {age}\n")
         info_system.write(f"Email: {email}\n")
         info_system.write(f"Phone Number: {phone_number}\n")
+
+        new_input = input("Input another person? (Type yes/no): ")
+        if new_input != "yes":
+            break 
