@@ -1,5 +1,5 @@
 # Ask user for their personal information
-with open("./Personal Information.txt", "a") as info_system:
+with open("./personal_information.txt", "a") as info_system:
      
     # Loop to keep asking user for input
     while True:
