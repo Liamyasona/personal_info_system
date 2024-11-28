@@ -1,5 +1,5 @@
 # Ask user for their personal information
-with open("./Personal Information.txt", "w") as info_system:
+with open("./Personal Information.txt", "a") as info_system:
      
     # Loop to keep asking user for input
     while True:
@@ -18,11 +18,14 @@ with open("./Personal Information.txt", "w") as info_system:
 
         # Ask user for age and print invalid when age inputted is less than and equal to 0
         while True:
-            age = int(input("Please input your age: "))
-            if age <= 0:
-                print("Invalid. Input the correct age")
-            else:
-                break
+            try:
+                age = int(input("Please input your age: "))
+                if age <= 0:
+                    print("Invalid. Input the correct age.")
+                else:
+                    break
+            except ValueError:
+                print("Invalid. Input the correct age.")
             
         # Ask user for email
         email = input("Please input your email: ")
