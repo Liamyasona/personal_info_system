@@ -6,6 +6,7 @@ with open("./personal_information.txt", "r") as info_system:
     lines = info_system.readlines()
     for i in range(len(lines)):
         if lines[i].strip() == f"Full name: {full_name_search}":
+            found = True
         # Print the information
             print("Here are the information found on the inputted name:")
             print(lines[i].strip()) # full_name
