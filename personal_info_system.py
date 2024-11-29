@@ -23,7 +23,7 @@ with open("./personal_information.txt", "a") as info_system:
                 if age <= 0:
                     print("Invalid. Input the correct age.")
                 else:
-                    break
+                    break # Valid age
             except ValueError:
                 print("Invalid. Input the correct age.")
             
@@ -35,7 +35,7 @@ with open("./personal_information.txt", "a") as info_system:
             try:
                 phone_number = int(input("Please input your Contact Number (11 digits): "))
                 if len(str(phone_number)) == 11:
-                    break
+                    break # Valid phone number
                 else:
                     print("Invalid Number. Please input your correct Phone Number.")
             except ValueError:
@@ -49,6 +49,7 @@ with open("./personal_information.txt", "a") as info_system:
         info_system.write(f"Phone Number: {phone_number}\n")
         info_system.write("-" * 30 + "\n")
 
+        # Ask user for another input but if no, break
         new_input = input("Input another person? (Type yes/no): ")
         if new_input != "yes":
             break 
