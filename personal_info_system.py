@@ -47,6 +47,7 @@ with open("./personal_information.txt", "a") as info_system:
         info_system.write(f"Age: {age}\n")
         info_system.write(f"Email: {email}\n")
         info_system.write(f"Phone Number: {phone_number}\n")
+        info_system.write("-" * 30 + "\n")
 
         new_input = input("Input another person? (Type yes/no): ")
         if new_input != "yes":
