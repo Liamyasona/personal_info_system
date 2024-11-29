@@ -1,8 +1,6 @@
 full_name_search = input("Please enter the full name to access the information: ").strip()
 
-# Try and except for error handling
-
-    # Read file
+# Read file
 with open("./personal_information.txt", "r") as info_system:
     found = False
     lines = info_system.readlines()
